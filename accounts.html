@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Nothing here pal, you're at wrong place-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Accounts - SecureBank</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script2.js"></script>
+    <link rel="icon" href="favicon.jpeg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div ><a href="index.html" class="logo">SecureBank</a></div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="accounts.html">Accounts</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="accounts-overview">
+            <h1>Your Accounts</h1>
+            <div class="accounts-grid">
+                <div class="account-card">
+                    <h3>Current Account</h3>
+                    <p class="account-number">**** 1234</p>
+                    <p class="balance">$2,543.67</p>
+                    <div class="account-actions">
+                        <button class="login-btn">Transfer</button>
+                        <button class="login-btn">Pay Bills</button>
+                    </div>
+                </div>
+                <div class="account-card">
+                    <h3>Savings Account</h3>
+                    <p class="account-number">**** 5678</p>
+                    <p class="balance">$10,789.42</p>
+                    <div class="account-actions">
+                        <button class="login-btn">Transfer</button>
+                        <button class="login-btn">Manage</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="actions-grid" >
+                <button class="login-btn">
+                    <span class="action-icon">↗️</span>
+                    Send Money
+                </button>
+                <button class="login-btn">
+                    <span class="action-icon">📱</span>
+                    Mobile Deposit
+                </button>
+                <button class="login-btn">
+                    <span class="action-icon">📄</span>
+                    Statements
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="XD">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="contact-icon">📧</i> support@securebank.com</p>
+                        <p><i class="contact-icon">📞</i> 1-800-SECURE</p>
+                        <p><i class="contact-icon">📍</i> 123 Banking Street, Finance City, FC 12345</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Personal Banking</a></li>
+                        <li><a href="#">Business Banking</a></li>
+                        <li><a href="#">Mobile Banking</a></li>
+                        <li><a href="#">Investments</a></li>
+                        <li><a href="#">Loans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📱</a>
+                        <a href="#" class="social-icon">👥</a>
+                        <a href="#" class="social-icon">📸</a>
+                        <a href="#" class="social-icon">🐦</a>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Subscribe to Newsletter</h5>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SecureBank. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script3.js"></script>
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="login-header">
+                <h2>SecureBank Login</h2>
+                <p class="login-subtitle">Enter your credentials to access your account</p>
+            </div>
+            <form id="loginForm" action="login.php" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-wrapper">
+                        <i class="input-icon">👤</i>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="input-icon">🔒</i>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-submit-btn">Login</button>
+                <div class="signup-link">
+                    Don't have an account? <a href="#" id="signupLink">Sign Up</a>
+                </div>
+            </form>
+            <div id="loginMessage" class="login-message"></div>
+        </div>
+    </div>
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="login-header">
+                <h2>Create Account</h2>
+                <p class="login-subtitle">Join SecureBank today</p>
+            </div>
+            <form id="signupForm" action="signup.php" method="post">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-wrapper">
+                        <i class="input-icon">👤</i>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <div class="input-wrapper">
+                        <i class="input-icon">📧</i>
+                        <input type="email" id="signupEmail" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupUsername">Username</label>
+                    <div class="input-wrapper">
+                        <i class="input-icon">👥</i>
+                        <input type="text" id="signupUsername" name="username" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <div class="input-wrapper">
+                        <i class="input-icon">🔒</i>
+                        <input type="password" id="signupPassword" name="password" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <i class="input-icon">🔒</i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                </div>
+                <button type="submit" class="login-submit-btn">Create Account</button>
+                <div class="signup-link">
+                    Already have an account? <a href="javascript:void(0)" id="loginLink">Log In</a>
+                </div>
+            </form>
+            <div id="signupMessage" class="login-message"></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
